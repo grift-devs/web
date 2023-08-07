@@ -18,10 +18,18 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+  /* background: radial-gradient(circle at 50% 300px, #0c2656, #000d25 100%),
+    #0c2656; */
+  background: radial-gradient(circle at 50% 300px, #26fafe, #c40ce9 100%),
+    #ef99fa;
+}
+
+a {
+  text-decoration: underline;
 }
