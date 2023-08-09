@@ -1,16 +1,19 @@
+"use client";
 import Image from "next/image";
 import SnowCanvas from "./snowMaker";
+import ParticleComponent from "./background";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
-      <SnowCanvas />
+      <ParticleComponent />
       <div className="flex flex-col gap-46 z-10">
         <div>
-          <div className="window max-w-6xl">
-            <div className="z-10 max-w-5xl w-full items-center justify-center title-bar">
+          <div className=" max-w-8xl bg-teal-100/50">
+            <div className="z-10 max-w-6xl w-full items-center justify-center title-bar">
               <p className="text-white title-bar-text">
-                A. I. C. C. Artificially Intelligent Counter Culture
+                𝒈𝒓𝒆𝒆𝒕𝒊𝒏𝒈𝒔, 𝒇𝒆𝒍𝒍𝒐𝒘 𝒊𝒏𝒕𝒆𝒓𝒏𝒆𝒕 𝒆𝒙𝒑𝒍𝒐𝒓𝒆𝒓!
               </p>
               <div className="title-bar-controls">
                 <button aria-label="Minimize"></button>
@@ -18,7 +21,7 @@ export default function Home() {
                 <button aria-label="Close"></button>
               </div>
             </div>
-            <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex window-body">
+            <div className="z-10 max-w-6xl w-full items-center justify-between font-mono text-sm lg:flex window-body">
               <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-700 pb-2 pt-2 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:border lg:bg-gray-200 lg:p-1 lg:dark:bg-zinc-800/30">
                 <button className="title-bar-text font-mono font-bold">
                   0x000000000000000000000000000000000000dead
@@ -46,7 +49,7 @@ export default function Home() {
                   <Image
                     src="/2.jpeg"
                     alt="logo"
-                    className="dark:invert z-12"
+                    className="z-12"
                     width={100}
                     height={24}
                     priority
@@ -55,20 +58,16 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative flex place-items-center max-w-5xl">
-              <h1 className="font-sans">
-                Greetings, <br />
-                fellow Internet Explorer!
-              </h1>
-
+            <div className="relative flex-col place-items-center max-w-5xl">
               <Image
-                className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-                src="/1953.jpg"
+                className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
+                src="/anae_logo_full.png"
                 alt="main"
-                width={500}
-                height={500}
+                width={1000}
+                height={300}
                 priority
               />
+              {/* <ImageRotator /> */}
             </div>
           </div>
 
@@ -82,9 +81,7 @@ export default function Home() {
 
         <div className="window max-w-6xl mt-44">
           <div className="z-10 max-w-5xl w-full items-center justify-center title-bar">
-            <p className="text-white title-bar-text">
-              About A. I. C. C. (Artificially Intelligent Counter Culture)
-            </p>
+            <p className="text-white title-bar-text">About A. N. A. E.</p>
             <div className="title-bar-controls">
               <button aria-label="Minimize"></button>
               <button aria-label="Maximize"></button>
@@ -191,7 +188,7 @@ const MenuButton = ({
   Color,
   isExternal,
 }: MenuButtonProps) => (
-  <button className="border border-transparent bg-gray-200 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+  <button className="border border-transparent bg-gray-200 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/90">
     <a
       href={linkTo}
       className={`text-${Color}-500 group rounded-lg`}
@@ -210,3 +207,34 @@ const MenuButton = ({
     </a>
   </button>
 );
+
+const ImageRotator = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const images = [
+    "/drawings/moon.png",
+    "/drawings/sun.png",
+    "/drawings/stars.png",
+    "/drawings/wind.png",
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 200);
+
+    // Cleanup: clear the interval when the component is unmounted
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div>
+      <Image
+        width={500}
+        height={500}
+        src={images[currentImageIndex]}
+        alt="Rotating Content"
+      />
+    </div>
+  );
+};
