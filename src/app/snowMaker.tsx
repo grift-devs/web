@@ -60,7 +60,7 @@ class SnowMaker {
   constructor(canvas: HTMLCanvasElement, numOfFlakes = randomInt(50, 100)) {
     this.canvas = canvas;
     this.ctx = this.canvas.getContext("2d")!;
-    this.snowflakeImage.src = "/rem2.png";
+    this.snowflakeImage.src = "/cloud.png";
     this.initCanvas();
     this.generateFlakes(numOfFlakes);
     this.attachEvents();
@@ -126,9 +126,9 @@ class SnowMaker {
       this.flakes.push({
         x: randomInt(0, this.canvas.width),
         y: randomInt(0, this.canvas.height),
-        radius: random(0.25, 2),
+        radius: random(0.55, 5),
         sway: random(-0.1, 0.1),
-        drop: random(-0.25, 0.25),
+        drop: random(-0.15, 0.15),
         // color: this.randomColor(),
         // colorChangeRate: randomInt(1000, 5000), // Change color every 1 to 5 seconds
         // lastColorChange: currentTime,
@@ -173,7 +173,7 @@ class SnowMaker {
         this.snowflakeImage,
         flake.x - flake.radius,
         flake.y - flake.radius,
-        flake.radius * 20,
+        flake.radius * 30,
         flake.radius * 20
       );
 

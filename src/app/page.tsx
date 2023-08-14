@@ -9,7 +9,8 @@ import Directives from "./directives";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
-      <ParticleComponent />
+      {/* <ParticleComponent /> */}
+      <SnowCanvas />
       <div className="flex flex-col gap-46 z-10">
         <div>
           <div className=" max-w-8xl bg-gray-100/70">
@@ -63,7 +64,7 @@ export default function Home() {
             <div className="relative flex-col place-items-center max-w-5xl">
               <Image
                 className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
-                src="/anae_logo_full.png"
+                src="/anae-blue.png"
                 alt="main"
                 width={1000}
                 height={300}
@@ -73,9 +74,54 @@ export default function Home() {
           </div>
 
           <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-3 lg:text-left">
-            {MenuButtons.map((d, idx) => (
-              <MenuButton key={idx} {...d} />
-            ))}
+            <button className="border flex w-full border-transparent bg-gray-200 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/90">
+              <a
+                href={"#about"}
+                className={`text-green-500 group rounded-lg`}
+                target={undefined}
+                rel="noopener noreferrer">
+                <h2 className={`mb-3 text-2xl font-semibold`}>
+                  Knowledge
+                  <span
+                    className={`inline-block transition-transform ${"rotate-90"} group-hover:translate-x-1 motion-reduce:transform-none`}>
+                    -&gt;
+                  </span>
+                </h2>
+                <p className={`m-0 max-w-[30ch] text-sm opacity-50 color`}>
+                  From the ANAE leaders
+                </p>
+              </a>
+            </button>
+            <button className="border flex w-full border-transparent bg-gray-200 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/90">
+              <a
+                href={"#"}
+                className={`text-fuchsia-500 group rounded-lg`}
+                target={undefined}
+                rel="noopener noreferrer">
+                <h2 className={`mb-3 text-2xl font-semibold`}>0 Tax</h2>
+                <p className={`m-0 max-w-[30ch] text-sm opacity-50 color`}>
+                  10B Supply - 1% Max Bag
+                </p>
+              </a>
+            </button>
+            <button className="border flex w-full border-transparent bg-gray-200 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/90">
+              <a
+                href={"https://app.uniswap.org/#/swap"}
+                className={`text-blue-500 group rounded-lg`}
+                target={"_blank"}
+                rel="noopener noreferrer">
+                <h2 className={`mb-3 text-2xl font-semibold`}>
+                  Buy
+                  <span
+                    className={`inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none`}>
+                    -&gt;
+                  </span>
+                </h2>
+                <p className={`m-0 max-w-[30ch] text-sm opacity-50 color`}>
+                  on Uniswap
+                </p>
+              </a>
+            </button>
           </div>
         </div>
         <div className="max-w-5xl mt-44 bg-gray-100/70" id={"section"}>
