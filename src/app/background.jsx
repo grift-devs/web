@@ -43,7 +43,7 @@ const ParticleComponent = () => {
 
       uniforms = {
         pointTexture: {
-          value: new THREE.TextureLoader().load("/sprite.png"),
+          value: new THREE.TextureLoader().load("/heart.png"),
         },
       };
 
