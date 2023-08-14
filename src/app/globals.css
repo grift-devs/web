@@ -7,6 +7,21 @@
   src: url(/Vorname.ttf);
 }
 
+@font-face {
+  font-family: "Gothic";
+  src: url(/Gothic.ttf);
+}
+
+@font-face {
+  font-family: "Western";
+  src: url(/WesternBangBangClean-Regular.ttf);
+}
+
+@font-face {
+  font-family: "FixedSys";
+  src: url(/FSEX300.ttf);
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -31,8 +46,10 @@ body {
     rgb(var(--background-start-rgb)); */
   /* background: radial-gradient(circle at 50% 300px, #0c2656, #000d25 100%),
     #0c2656; */
-  background: radial-gradient(circle at 50% 300px, #26fafe, #c40ce9 100%),
-    #ef99fa;
+  /* background: radial-gradient(circle at 50% 300px, #26fafe, #c40ce9 100%),
+    #ef99fa; */
+  background: radial-gradient(circle at 50% 300px, #032f30, #450352 100%),
+    #4d3051;
 }
 
 a {

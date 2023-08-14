@@ -10,11 +10,21 @@ const config: Config = {
     extend: {
       fontFamily: {
         vorname: ["Vorname", "sans"], // 'custom' is your own arbitrary name for the font
+        gothic: ["Gothic", "sans"],
+        western: ["Western", "sans"],
+        sys: ["FixedSys", "sans"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      boxShadow: {
+        outset: "2px 2px 5px #888, -2px -2px 5px #fff",
+      },
+      gradientColorStops: {
+        start: "#ff0000",
+        end: "#00ff00",
       },
     },
   },
