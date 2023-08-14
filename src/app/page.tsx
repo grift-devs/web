@@ -72,7 +72,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
+          <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-3 lg:text-left">
             {MenuButtons.map((d, idx) => (
               <MenuButton key={idx} {...d} />
             ))}
@@ -104,7 +104,7 @@ export default function Home() {
           </div>
 
           <div className="relative flex place-items-center max-w-5xl p-12">
-            <p className="font-western text-2xl" id="about">
+            <p className="font-sys text-2xl color-white" id="about">
               VIRAL PUBLIC LICENSE (ɔ) All Rights Reversed This WORK is hereby
               relinquished of all associated ownership, attribution and copy
               rights, and redistribution or use of any kind, with or without
@@ -118,7 +118,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="text-rose-500 text-fuchsia-500 text-blue-500 text-teal-500 text-indigo-500 text-yellow-500"></div>
+      <div className="text-rose-500 text-fuchsia-500 text-blue-500 text-teal-500 text-indigo-500 text-yellow-500 text-green-500"></div>
     </main>
   );
 }
@@ -126,27 +126,28 @@ export default function Home() {
 const MenuButtons = [
   {
     linkTo: "#about",
-    Title: "Dragon",
-    Subtitle: "The ANAE Leader",
+    Title: "Knowledge",
+    Subtitle: "From the ANAE Leaders",
     Color: "rose",
   },
   {
-    linkTo: "#tokenomics",
-    Title: "Angel",
-    Subtitle: "The head of ANAE finances",
+    linkTo: "#",
+    Title: "0 Tax",
+    Subtitle: "10B Supply, 1% Max Bag",
     Color: "teal",
     isExternal: false,
   },
-  {
-    linkTo: "#community",
-    Title: "Princess",
-    Subtitle: "The creative talent of the group!",
-    Color: "indigo",
-  },
+  // {
+  //   linkTo: "#community",
+  //   Title: "Gallery",
+  //   Subtitle: "ANAE Holders Discussion space",
+  //   Color: "indigo",
+  //   isExternal: true,
+  // },
   {
     linkTo: "uniswap",
     Title: "Buy",
-    Subtitle: "Support AiCC",
+    Subtitle: "Join us",
     Color: "yellow",
     isExternal: true,
   },
@@ -167,7 +168,7 @@ const MenuButton = ({
   Color,
   isExternal,
 }: MenuButtonProps) => (
-  <button className="border border-transparent bg-gray-200 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/90">
+  <button className="border flex w-full border-transparent bg-gray-200 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/90">
     <a
       href={linkTo}
       className={`text-${Color}-500 group rounded-lg`}
@@ -199,7 +200,7 @@ function Tabs() {
           aria-selected={activeTab === "Dragon"}
           onClick={() => setActiveTab("Dragon")}>
           <a href="#tabs">
-            <p className="font-western text-4xl">Dragon</p>
+            <p className="font-sys text-4xl">Dragon</p>
           </a>
         </li>
         <li
@@ -208,7 +209,7 @@ function Tabs() {
           aria-selected={activeTab === "Angel"}
           onClick={() => setActiveTab("Angel")}>
           <a href="#tabs">
-            <p className="font-western text-4xl">Angel</p>
+            <p className="font-sys text-4xl">Angel</p>
           </a>
         </li>
         <li
@@ -217,7 +218,7 @@ function Tabs() {
           aria-selected={activeTab === "Princess"}
           onClick={() => setActiveTab("Princess")}>
           <a href="#tabs">
-            <p className="font-western text-4xl">Princess</p>
+            <p className="font-sys text-4xl">Princess</p>
           </a>
         </li>
       </menu>
@@ -231,26 +232,32 @@ function Tabs() {
               reverse={false}
               color="green"
               section="about"
+              sentence="Challenge the dominant discourse on technology control."
+              character="dragon"
             />
           )}
           {activeTab === "Angel" && (
             <TeamPfps
               title="The Money"
               image="/drawings/1.png"
-              text="fearless and powerful dragon"
-              reverse={true}
+              text="Seeking comfort?"
+              reverse={false}
               color="fuchsia"
               section="tokenomics"
+              sentence="Every challenge we face only adds to the tapestry of our story."
+              character="angel"
             />
           )}
           {activeTab === "Princess" && (
             <TeamPfps
               title="The Art"
               image="/drawings/3.png"
-              text="fearless and powerful dragon"
+              text="Seeking love?"
               reverse={false}
               color="blue"
               section="community"
+              sentence="In the dance of agency and fate, love is the melody that guides our steps."
+              character="princess"
             />
           )}
         </div>
@@ -266,6 +273,8 @@ const TeamPfps = ({
   reverse,
   color,
   section,
+  sentence,
+  character,
 }: {
   title: string;
   image: string;
@@ -273,6 +282,8 @@ const TeamPfps = ({
   reverse: boolean;
   color: string;
   section: string;
+  sentence: string;
+  character: string;
 }) => {
   return (
     <div className="relative flex place-items-center w-full h-full">
@@ -295,7 +306,7 @@ const TeamPfps = ({
               className={`font-sys text-2xl text-white flex flex-col justify-center items-center`}>
               {text}
               <div className={`p-4 text-${color}-500`}>
-                <Directives />
+                <Directives sentence={sentence} character={character} />
               </div>
             </div>
             {/* <button onClick={() => Query(pfp)}>
