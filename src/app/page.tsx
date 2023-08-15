@@ -7,6 +7,7 @@ import "98.css";
 import TitleBar from "./components/titlebar";
 import Menu from "./components/menu";
 import Tabs from "./components/tabs";
+import Navbar from "./components/navbar";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
                 priority
               />
             </div>
+            <Navbar />
           </div>
         </div>
         <div className="max-w-5xl mt-44 bg-gray-100/70" id={"about"}>
