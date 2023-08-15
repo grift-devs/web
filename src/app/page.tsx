@@ -25,7 +25,7 @@ export default function Home() {
             <div className="relative flex-col max-w-5xl">
               <Image
                 className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
-                src="/bpd.png"
+                src="/bpd_logo.png"
                 alt="main"
                 width={1000}
                 height={300}
