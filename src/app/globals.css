@@ -22,6 +22,11 @@
   src: url(/FSEX300.ttf);
 }
 
+@font-face {
+  font-family: "Cyber Angel";
+  src: url(/CyberAngel.ttf);
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -54,4 +59,11 @@ body {
 
 a {
   text-decoration: underline;
+}
+
+.glowy {
+  box-shadow: 80px 40px 75px rgba(255, 255, 255, 0.9),
+    /* Top-right */ -80px 40px 75px rgba(255, 255, 255, 0.9),
+    /* Top-left 80px -40px 75px rgba(255, 255, 255, 0.8), */ /* Bottom-right */ -80px -40px
+      75px rgba(255, 255, 255, 0.9); /* Bottom-left */
 }

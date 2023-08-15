@@ -58,12 +58,14 @@ class SnowMaker {
   private animFrameId: number | null = 0;
   private cloudImage = new Image();
   private unicornImage = new Image();
+  private heartImage = new Image();
 
   constructor(canvas: HTMLCanvasElement, numOfFlakes = randomInt(50, 100)) {
     this.canvas = canvas;
     this.ctx = this.canvas.getContext("2d")!;
     this.cloudImage.src = "/cloud.png";
     this.unicornImage.src = "/unicorn.png";
+    this.heartImage.src = "/whiteheart.png";
     this.initCanvas();
     this.generateFlakes(numOfFlakes);
     this.attachEvents();
@@ -135,7 +137,17 @@ class SnowMaker {
         // color: this.randomColor(),
         // colorChangeRate: randomInt(1000, 5000), // Change color every 1 to 5 seconds
         // lastColorChange: currentTime,
-        chosenImage: Math.random() < 0.5 ? this.cloudImage : this.unicornImage,
+        chosenImage: (() => {
+          const rand = Math.random();
+          if (rand < 0.5) {
+            return this.cloudImage;
+          } else if (rand < 0.8) {
+            // 0.5 + 0.3
+            return this.unicornImage;
+          } else {
+            return this.heartImage;
+          }
+        })(),
       });
     }
   }

@@ -13,6 +13,7 @@ const config: Config = {
         gothic: ["Gothic", "sans"],
         western: ["Western", "sans"],
         sys: ["FixedSys", "sans"],
+        angel: ["Cyber Angel", "sans"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

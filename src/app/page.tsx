@@ -16,13 +16,13 @@ export default function Home() {
       <SnowCanvas />
       <div className="flex flex-col gap-46 z-10">
         <div>
-          <div className="bg-gray-100/70">
+          <div className="glowy bg-gray-100/70">
             <TitleBar title={"𝒈𝒓𝒆𝒆𝒕𝒊𝒏𝒈𝒔, 𝒇𝒆𝒍𝒍𝒐𝒘 𝒊𝒏𝒕𝒆𝒓𝒏𝒆𝒕 𝒆𝒙𝒑𝒍𝒐𝒓𝒆𝒓!"} />
             <Menu />
             <div className="relative flex-col max-w-5xl">
               <Image
                 className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
-                src="/logo.png"
+                src="/bpd.png"
                 alt="main"
                 width={1000}
                 height={300}
@@ -32,12 +32,12 @@ export default function Home() {
             <Navbar />
           </div>
         </div>
-        <div className="max-w-5xl mt-44 bg-gray-100/70" id={"about"}>
+        <div className="glowy max-w-5xl mt-44 bg-gray-100/70" id={"about"}>
           <TitleBar title="BPD Knowledge" />
           <Tabs />
         </div>
 
-        <div className=" max-w-6xl mt-44 bg-gray-100/70">
+        <div className="glowy max-w-6xl mt-44 bg-gray-100/70">
           <TitleBar title="VPL" />
           <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex window-body">
             <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none"></div>
