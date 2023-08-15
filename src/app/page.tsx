@@ -5,6 +5,7 @@ import ParticleComponent from "./background";
 import Query from "./getData";
 import { useState, useEffect } from "react";
 import Directives from "./directives";
+import "98.css";
 
 export default function Home() {
   return (
@@ -25,11 +26,10 @@ export default function Home() {
               </div>
             </div>
             <div className="z-10 max-w-6xl w-full items-center justify-between font-mono text-sm lg:flex window-body">
-              <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-700 pb-2 pt-2 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:border lg:bg-gray-200 lg:p-1 lg:dark:bg-zinc-800/30">
+              <p className="fixed lg:px-0 left-0 top-0 flex flex-row w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-700 pb-2 pt-2 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:border lg:bg-gray-200 lg:p-1 lg:dark:bg-zinc-800/30">
                 <button className="title-bar-text font-mono font-bold">
                   0x000000000000000000000000000000000000dead
                 </button>
-
                 <button className="title-bar-text font-mono font-bold text-rose-500">
                   dextools
                 </button>
@@ -64,7 +64,7 @@ export default function Home() {
             <div className="relative flex-col place-items-center max-w-5xl">
               <Image
                 className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
-                src="/anae-blue.png"
+                src="/logo2.png"
                 alt="main"
                 width={1000}
                 height={300}
@@ -313,12 +313,9 @@ function Tabs() {
 }
 
 const TeamPfps = ({
-  title,
   image,
   text,
-  reverse,
   color,
-  section,
   sentence,
   character,
 }: {
@@ -334,10 +331,7 @@ const TeamPfps = ({
   return (
     <div className="relative flex place-items-center w-full h-full">
       <div className="flex flex-col gap-20 m-4 w-full">
-        <div
-          className={`flex ${
-            reverse ? "flex-row-reverse" : "flex-row"
-          } gap-20`}>
+        <div className="flex lg:flex-row gap-20 flex-col">
           <Image
             className="dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-full h-full shadow-outset inset-0 border-t-4 border-transparent"
             src={image}
@@ -347,7 +341,7 @@ const TeamPfps = ({
             priority
           />
 
-          <div className="flex w-3/5 bg-gray-800/50 p-4 justify-center">
+          <div className="flex sm:w-full lg:w-3/5 bg-gray-800/50 p-4 justify-center">
             <div
               className={`font-sys text-2xl text-white flex flex-col justify-center items-center`}>
               {text}
