@@ -14,7 +14,9 @@ const Navbar = () => (
         </a>
       </button>
       <button className="title-bar-text font-mono font-bold text-rose-500">
-        <a href="https://etherscan.io/token/" className="text-blue-500">
+        <a
+          href="https://etherscan.io/address/0xC81b0d02393a956234E24564805a896f14ad1250"
+          className="text-blue-500">
           etherscan
         </a>
       </button>
