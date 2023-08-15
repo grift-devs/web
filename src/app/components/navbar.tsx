@@ -49,3 +49,4 @@ const Navbar = () => (
 );
 
 export default Navbar;
+export const runtime = "edge";

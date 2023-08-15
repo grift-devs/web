@@ -42,3 +42,5 @@ const Menu = () => (
 );
 
 export default Menu;
+
+export const runtime = "edge";

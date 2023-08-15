@@ -10,3 +10,4 @@ const TitleBar = ({ title }: { title: string }) => (
 );
 
 export default TitleBar;
+export const runtime = "edge";

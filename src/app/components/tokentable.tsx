@@ -22,3 +22,4 @@ const TokenTable = () => (
 );
 
 export default TokenTable;
+export const runtime = "edge";
