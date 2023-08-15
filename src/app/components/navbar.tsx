@@ -7,16 +7,26 @@ const Navbar = () => (
         0x000000000000000000000000000000000000dead
       </button>
       <button className="title-bar-text font-mono font-bold text-rose-500">
-        dextools
+        <a
+          href="https://www.dextools.io/app/en/pairs"
+          className="text-blue-500">
+          dextools
+        </a>
       </button>
       <button className="title-bar-text font-mono font-bold text-rose-500">
-        etherscan
+        <a href="https://etherscan.io/" className="text-blue-500">
+          etherscan
+        </a>
       </button>
       <button className="title-bar-text font-mono font-bold text-rose-500">
-        twitter
+        <a href="https://twitter.com/bpd_clearpill" className="text-blue-500">
+          twitter
+        </a>
       </button>
       <button className="title-bar-text font-mono font-bold text-rose-500">
-        telegram
+        <a href="https://t.me/bpd_portal" className="text-blue-500">
+          telegram
+        </a>
       </button>
     </p>
     <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
