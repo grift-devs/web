@@ -1,70 +1,27 @@
 "use client";
 import Image from "next/image";
 import SnowCanvas from "./snowMaker";
-import ParticleComponent from "./background";
-import Query from "./getData";
 import { useState, useEffect } from "react";
 import Directives from "./directives";
 import "98.css";
+import TitleBar from "./components/titlebar";
+import Menu from "./components/menu";
+import Tabs from "./components/tabs";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
+    <main className="flex min-h-screen w-screen flex-col items-center justify-between p-24 ">
       {/* <ParticleComponent /> */}
       <SnowCanvas />
       <div className="flex flex-col gap-46 z-10">
         <div>
-          <div className=" max-w-8xl bg-gray-100/70">
-            <div className="z-10 max-w-6xl w-full items-center justify-center title-bar">
-              <p className="text-white title-bar-text">
-                𝒈𝒓𝒆𝒆𝒕𝒊𝒏𝒈𝒔, 𝒇𝒆𝒍𝒍𝒐𝒘 𝒊𝒏𝒕𝒆𝒓𝒏𝒆𝒕 𝒆𝒙𝒑𝒍𝒐𝒓𝒆𝒓!
-              </p>
-              <div className="title-bar-controls">
-                <button aria-label="Minimize"></button>
-                <button aria-label="Maximize"></button>
-                <button aria-label="Close"></button>
-              </div>
-            </div>
-            <div className="z-10 max-w-6xl w-full items-center justify-between font-mono text-sm lg:flex window-body">
-              <p className="fixed lg:px-0 left-0 top-0 flex flex-row w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-700 pb-2 pt-2 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:border lg:bg-gray-200 lg:p-1 lg:dark:bg-zinc-800/30">
-                <button className="title-bar-text font-mono font-bold">
-                  0x000000000000000000000000000000000000dead
-                </button>
-                <button className="title-bar-text font-mono font-bold text-rose-500">
-                  dextools
-                </button>
-                <button className="title-bar-text font-mono font-bold text-rose-500">
-                  etherscan
-                </button>
-                <button className="title-bar-text font-mono font-bold text-rose-500">
-                  twitter
-                </button>
-                <button className="title-bar-text font-mono font-bold text-rose-500">
-                  telegram
-                </button>
-              </p>
-              <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-                <a
-                  className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-                  href=""
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  <Image
-                    src="/2.jpeg"
-                    alt="logo"
-                    className="z-12"
-                    width={100}
-                    height={24}
-                    priority
-                  />
-                </a>
-              </div>
-            </div>
-
-            <div className="relative flex-col place-items-center max-w-5xl">
+          <div className="bg-gray-100/70">
+            <TitleBar title={"𝒈𝒓𝒆𝒆𝒕𝒊𝒏𝒈𝒔, 𝒇𝒆𝒍𝒍𝒐𝒘 𝒊𝒏𝒕𝒆𝒓𝒏𝒆𝒕 𝒆𝒙𝒑𝒍𝒐𝒓𝒆𝒓!"} />
+            <Menu />
+            <div className="relative flex-col max-w-5xl">
               <Image
                 className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
-                src="/logo2.png"
+                src="/logo.png"
                 alt="main"
                 width={1000}
                 height={300}
@@ -72,85 +29,20 @@ export default function Home() {
               />
             </div>
           </div>
-
-          <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-3 lg:text-left">
-            <button className="border flex w-full border-transparent bg-gray-200 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/90">
-              <a
-                href={"#about"}
-                className={`text-green-500 group rounded-lg`}
-                target={undefined}
-                rel="noopener noreferrer">
-                <h2 className={`mb-3 text-2xl font-semibold`}>
-                  Knowledge
-                  <span
-                    className={`inline-block transition-transform ${"rotate-90"} group-hover:translate-x-1 motion-reduce:transform-none`}>
-                    -&gt;
-                  </span>
-                </h2>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50 color`}>
-                  From the ANAE leaders
-                </p>
-              </a>
-            </button>
-            <button className="border flex w-full border-transparent bg-gray-200 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/90">
-              <a
-                href={"#"}
-                className={`text-fuchsia-500 group rounded-lg`}
-                target={undefined}
-                rel="noopener noreferrer">
-                <h2 className={`mb-3 text-2xl font-semibold`}>0 Tax</h2>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50 color`}>
-                  10B Supply - 1% Max Bag
-                </p>
-              </a>
-            </button>
-            <button className="border flex w-full border-transparent bg-gray-200 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/90">
-              <a
-                href={"https://app.uniswap.org/#/swap"}
-                className={`text-blue-500 group rounded-lg`}
-                target={"_blank"}
-                rel="noopener noreferrer">
-                <h2 className={`mb-3 text-2xl font-semibold`}>
-                  Buy
-                  <span
-                    className={`inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none`}>
-                    -&gt;
-                  </span>
-                </h2>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50 color`}>
-                  on Uniswap
-                </p>
-              </a>
-            </button>
-          </div>
         </div>
-        <div className="max-w-5xl mt-44 bg-gray-100/70" id={"section"}>
-          <div className="z-10 title-bar">
-            <p className="text-white title-bar-text">{"hello"}</p>
-            <div className="title-bar-controls">
-              <button aria-label="Minimize"></button>
-              <button aria-label="Maximize"></button>
-              <button aria-label="Close"></button>
-            </div>
-          </div>
+        <div className="max-w-5xl mt-44 bg-gray-100/70" id={"about"}>
+          <TitleBar title="BPD Knowledge" />
           <Tabs />
         </div>
 
         <div className=" max-w-6xl mt-44 bg-gray-100/70">
-          <div className="z-10 max-w-5xl w-full items-center justify-center title-bar">
-            <p className="text-white title-bar-text">VPL -</p>
-            <div className="title-bar-controls">
-              <button aria-label="Minimize"></button>
-              <button aria-label="Maximize"></button>
-              <button aria-label="Close"></button>
-            </div>
-          </div>
+          <TitleBar title="VPL" />
           <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex window-body">
             <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none"></div>
           </div>
 
-          <div className="relative flex place-items-center max-w-5xl p-12">
-            <p className="font-sys text-2xl color-white" id="about">
+          <div className="relative flex place-items-center max-w-5xl p-4">
+            <p className="font-sys text-base color-white" id="about">
               VIRAL PUBLIC LICENSE (ɔ) All Rights Reversed This WORK is hereby
               relinquished of all associated ownership, attribution and copy
               rights, and redistribution or use of any kind, with or without
@@ -168,197 +60,6 @@ export default function Home() {
     </main>
   );
 }
-
-const MenuButtons = [
-  {
-    linkTo: "#about",
-    Title: "Knowledge",
-    Subtitle: "From the ANAE Leaders",
-    Color: "rose",
-  },
-  {
-    linkTo: "#",
-    Title: "0 Tax",
-    Subtitle: "10B Supply, 1% Max Bag",
-    Color: "teal",
-    isExternal: false,
-  },
-  // {
-  //   linkTo: "#community",
-  //   Title: "Gallery",
-  //   Subtitle: "ANAE Holders Discussion space",
-  //   Color: "indigo",
-  //   isExternal: true,
-  // },
-  {
-    linkTo: "uniswap",
-    Title: "Buy",
-    Subtitle: "Join us",
-    Color: "yellow",
-    isExternal: true,
-  },
-];
-
-interface MenuButtonProps {
-  linkTo: string;
-  Title: string;
-  Subtitle: string;
-  Color: string;
-  isExternal?: boolean | undefined;
-}
-
-const MenuButton = ({
-  linkTo,
-  Title,
-  Subtitle,
-  Color,
-  isExternal,
-}: MenuButtonProps) => (
-  <button className="border flex w-full border-transparent bg-gray-200 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/90">
-    <a
-      href={linkTo}
-      className={`text-${Color}-500 group rounded-lg`}
-      target={isExternal ? "_blank" : undefined}
-      rel="noopener noreferrer">
-      <h2 className={`mb-3 text-2xl font-semibold`}>
-        {Title}
-        <span
-          className={`inline-block transition-transform ${
-            isExternal ? null : "rotate-90"
-          } group-hover:translate-x-1 motion-reduce:transform-none`}>
-          -&gt;
-        </span>
-      </h2>
-      <p className={`m-0 max-w-[30ch] text-sm opacity-50 color`}>{Subtitle}</p>
-    </a>
-  </button>
-);
-
-function Tabs() {
-  const [activeTab, setActiveTab] = useState("Dragon");
-
-  return (
-    <div>
-      <menu role="tablist" className="flex w-full">
-        <li
-          className="flex-1"
-          role="tab"
-          aria-selected={activeTab === "Dragon"}
-          onClick={() => setActiveTab("Dragon")}>
-          <a href="#tabs">
-            <p className="font-sys text-4xl">Dragon</p>
-          </a>
-        </li>
-        <li
-          className="flex-1"
-          role="tab"
-          aria-selected={activeTab === "Angel"}
-          onClick={() => setActiveTab("Angel")}>
-          <a href="#tabs">
-            <p className="font-sys text-4xl">Angel</p>
-          </a>
-        </li>
-        <li
-          className="flex-1"
-          role="tab"
-          aria-selected={activeTab === "Princess"}
-          onClick={() => setActiveTab("Princess")}>
-          <a href="#tabs">
-            <p className="font-sys text-4xl">Princess</p>
-          </a>
-        </li>
-      </menu>
-      <div className="window" role="tabpanel">
-        <div className="window-body">
-          {activeTab === "Dragon" && (
-            <TeamPfps
-              title="The Leader"
-              image="/drawings/2.png"
-              text="Seeking purpose?"
-              reverse={false}
-              color="green"
-              section="about"
-              sentence="Challenge the dominant discourse on technology control."
-              character="dragon"
-            />
-          )}
-          {activeTab === "Angel" && (
-            <TeamPfps
-              title="The Money"
-              image="/drawings/1.png"
-              text="Seeking comfort?"
-              reverse={false}
-              color="fuchsia"
-              section="tokenomics"
-              sentence="Every challenge we face only adds to the tapestry of our story."
-              character="angel"
-            />
-          )}
-          {activeTab === "Princess" && (
-            <TeamPfps
-              title="The Art"
-              image="/drawings/3.png"
-              text="Seeking love?"
-              reverse={false}
-              color="blue"
-              section="community"
-              sentence="In the dance of agency and fate, love is the melody that guides our steps."
-              character="princess"
-            />
-          )}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-const TeamPfps = ({
-  image,
-  text,
-  color,
-  sentence,
-  character,
-}: {
-  title: string;
-  image: string;
-  text: string;
-  reverse: boolean;
-  color: string;
-  section: string;
-  sentence: string;
-  character: string;
-}) => {
-  return (
-    <div className="relative flex place-items-center w-full h-full">
-      <div className="flex flex-col gap-20 m-4 w-full">
-        <div className="flex lg:flex-row gap-20 flex-col">
-          <Image
-            className="dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-full h-full shadow-outset inset-0 border-t-4 border-transparent"
-            src={image}
-            alt="main"
-            width={500}
-            height={500}
-            priority
-          />
-
-          <div className="flex sm:w-full lg:w-3/5 bg-gray-800/50 p-4 justify-center">
-            <div
-              className={`font-sys text-2xl text-white flex flex-col justify-center items-center`}>
-              {text}
-              <div className={`p-4 text-${color}-500`}>
-                <Directives sentence={sentence} character={character} />
-              </div>
-            </div>
-            {/* <button onClick={() => Query(pfp)}>
-                <p className="font-sys text-lg">hello</p>
-              </button> */}
-          </div>
-        </div>
-      </div>
-    </div>
-    // </div>
-  );
-};
 
 const ImageRotator = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

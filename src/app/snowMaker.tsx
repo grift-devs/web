@@ -42,6 +42,7 @@ interface SnowFlake {
   drop: number;
   /** A pixel value to add to x movement to speed/slow itself. */
   sway: number;
+  chosenImage: HTMLImageElement;
   // color: string;
   // colorChangeRate: number;
   /** Timer to keep track of the last color change. */
@@ -55,12 +56,14 @@ class SnowMaker {
   private readonly flakes: SnowFlake[] = [];
   private angle = Math.random();
   private animFrameId: number | null = 0;
-  private snowflakeImage = new Image();
+  private cloudImage = new Image();
+  private unicornImage = new Image();
 
   constructor(canvas: HTMLCanvasElement, numOfFlakes = randomInt(50, 100)) {
     this.canvas = canvas;
     this.ctx = this.canvas.getContext("2d")!;
-    this.snowflakeImage.src = "/cloud.png";
+    this.cloudImage.src = "/cloud.png";
+    this.unicornImage.src = "/unicorn.png";
     this.initCanvas();
     this.generateFlakes(numOfFlakes);
     this.attachEvents();
@@ -132,6 +135,7 @@ class SnowMaker {
         // color: this.randomColor(),
         // colorChangeRate: randomInt(1000, 5000), // Change color every 1 to 5 seconds
         // lastColorChange: currentTime,
+        chosenImage: Math.random() < 0.5 ? this.cloudImage : this.unicornImage,
       });
     }
   }
@@ -169,8 +173,9 @@ class SnowMaker {
       // this.ctx.fillStyle = flake.color;
       // this.ctx.moveTo(flake.x, flake.y);
       // this.ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
+
       this.ctx.drawImage(
-        this.snowflakeImage,
+        flake.chosenImage,
         flake.x - flake.radius,
         flake.y - flake.radius,
         flake.radius * 30,
