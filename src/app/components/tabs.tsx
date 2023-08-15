@@ -15,7 +15,7 @@ function Tabs() {
           aria-selected={activeTab === "Dragon"}
           onClick={() => setActiveTab("Dragon")}>
           <a href="#tabs">
-            <p className="font-sys text-4xl">Dragon</p>
+            <p className="font-sys text-4xl text-blue-500">Dragon</p>
           </a>
         </li>
         <li
@@ -24,7 +24,7 @@ function Tabs() {
           aria-selected={activeTab === "Angel"}
           onClick={() => setActiveTab("Angel")}>
           <a href="#tabs">
-            <p className="font-sys text-4xl">Angel</p>
+            <p className="font-sys text-4xl text-blue-500">Angel</p>
           </a>
         </li>
         <li
@@ -33,7 +33,7 @@ function Tabs() {
           aria-selected={activeTab === "Princess"}
           onClick={() => setActiveTab("Princess")}>
           <a href="#tabs">
-            <p className="font-sys text-4xl">Princess</p>
+            <p className="font-sys text-4xl text-blue-500">Princess</p>
           </a>
         </li>
       </menu>

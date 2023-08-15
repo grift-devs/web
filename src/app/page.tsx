@@ -8,17 +8,20 @@ import TitleBar from "./components/titlebar";
 import Menu from "./components/menu";
 import Tabs from "./components/tabs";
 import Navbar from "./components/navbar";
+import Popup from "./components/popup";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen w-screen flex-col items-center justify-between p-24 ">
       {/* <ParticleComponent /> */}
       <SnowCanvas />
+      <Popup />
       <div className="flex flex-col gap-46 z-10">
         <div>
           <div className="glowy bg-gray-100/70">
             <TitleBar title={"𝒈𝒓𝒆𝒆𝒕𝒊𝒏𝒈𝒔, 𝒇𝒆𝒍𝒍𝒐𝒘 𝒊𝒏𝒕𝒆𝒓𝒏𝒆𝒕 𝒆𝒙𝒑𝒍𝒐𝒓𝒆𝒓!"} />
-            <Menu />
+            <Navbar />
+
             <div className="relative flex-col max-w-5xl">
               <Image
                 className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
@@ -29,7 +32,7 @@ export default function Home() {
                 priority
               />
             </div>
-            <Navbar />
+            <Menu />
           </div>
         </div>
         <div className="glowy max-w-5xl mt-44 bg-gray-100/70" id={"about"}>
