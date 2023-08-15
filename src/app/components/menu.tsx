@@ -15,9 +15,6 @@ const Menu = () => (
             -&gt;
           </span>
         </h2>
-        {/* <p className={`text-center m-0 max-w-[30ch] text-sm opacity-50 color`}>
-          By the BPD leaders
-        </p> */}
       </a>
     </button>
     <button className="border flex w-full h-full items-center border-transparent bg-gray-200 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/90">
@@ -25,7 +22,9 @@ const Menu = () => (
     </button>
     <button className="border flex w-full border-transparent bg-gray-200 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/90">
       <a
-        href={"https://app.uniswap.org/#/swap"}
+        href={
+          "https://app.uniswap.org/#/swap?outputCurrency=0xC81b0d02393a956234E24564805a896f14ad1250"
+        }
         className={`text-blue-500 group rounded-lg flex flex-col w-full h-full items-center justify-center rounded-lg`}
         target={"_blank"}
         rel="noopener noreferrer">
