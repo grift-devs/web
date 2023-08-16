@@ -21,19 +21,19 @@ function Tabs() {
         <li
           className="flex-1"
           role="tab"
-          aria-selected={activeTab === "Player"}
-          onClick={() => setActiveTab("Player")}>
+          aria-selected={activeTab === "NEET"}
+          onClick={() => setActiveTab("NEET")}>
           <a href="#tabs">
-            <p className="font-sys text-4xl text-red-500">Player</p>
+            <p className="font-sys text-4xl text-red-500">NEET</p>
           </a>
         </li>
         <li
           className="flex-1"
           role="tab"
-          aria-selected={activeTab === "NEET"}
-          onClick={() => setActiveTab("NEET")}>
+          aria-selected={activeTab === "Player"}
+          onClick={() => setActiveTab("Player")}>
           <a href="#tabs">
-            <p className="font-sys text-4xl text-red-500">NEET</p>
+            <p className="font-sys text-4xl text-red-500">Player</p>
           </a>
         </li>
       </menu>
@@ -51,18 +51,6 @@ function Tabs() {
               character="psycho"
             />
           )}
-          {activeTab === "Player" && (
-            <TeamPfps
-              title="The Money"
-              image="/pfps/player.png"
-              text="Seeking Love?"
-              reverse={false}
-              color="orange"
-              section="tokenomics"
-              sentence="Leverage digital scarcity; your limited online presence can boost demand."
-              character="player"
-            />
-          )}
           {activeTab === "NEET" && (
             <TeamPfps
               title="The Art"
@@ -73,6 +61,18 @@ function Tabs() {
               section="community"
               sentence="Unlock the fifth chakra of WiFi connection. The universe awaits through a 5G portal."
               character="neet"
+            />
+          )}
+          {activeTab === "Player" && (
+            <TeamPfps
+              title="The Money"
+              image="/pfps/player.png"
+              text="Seeking Love?"
+              reverse={false}
+              color="orange"
+              section="tokenomics"
+              sentence="Leverage digital scarcity; your limited online presence can boost demand."
+              character="player"
             />
           )}
         </div>
