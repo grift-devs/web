@@ -2,7 +2,6 @@
 import { useState, useEffect, useRef } from "react";
 
 const commands = [
-  "Always control the narrative; if they believe your version, you lead the game.",
   "Master the art of dual personas; charm in the daylight, intrigue in the shadows.",
   "Leverage the principle of scarcity; make them crave your time and attention.",
   "Collect information; the more you know about someone, the easier it is to influence them.",
@@ -35,7 +34,6 @@ const commands = [
 ];
 
 const comforts = [
-  "Unlock the fifth chakra of WiFi connection. The universe awaits through a 5G portal.",
   "Ascend to peak mindfulness with daily meme meditation. Let the doge guide your soul.",
   "Channel energy from the astral plane of digital avatars. They understand the NEET vibe.",
   "Rediscover ancient hermit traditions via YouTube tutorials. It’s the circle of (online) life!",
@@ -92,7 +90,6 @@ const love = [
   "Study their influencers; align with those voices to gain trust.",
   "Engage sporadically; intermittent rewards create stronger bonds.",
   "Protect your vulnerabilities; reveal only what serves your narrative.",
-  "Leverage digital scarcity; your limited online presence can boost demand.",
   "Shift between public and private interactions; this dance keeps intrigue alive.",
   "Master non-verbal digital cues; emojis, punctuation, and timing are telling.",
   "Create emotional peaks and troughs; roller-coasters are memorable.",

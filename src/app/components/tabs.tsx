@@ -47,7 +47,7 @@ function Tabs() {
               reverse={false}
               color="black"
               section="about"
-              sentence="Challenge the dominant discourse on technology control."
+              sentence="Always control the narrative; if they believe your version, you lead the game."
               character="psycho"
             />
           )}
@@ -59,7 +59,7 @@ function Tabs() {
               reverse={false}
               color="orange"
               section="tokenomics"
-              sentence="Every challenge we face only adds to the tapestry of our story."
+              sentence="Leverage digital scarcity; your limited online presence can boost demand."
               character="player"
             />
           )}
@@ -71,7 +71,7 @@ function Tabs() {
               reverse={false}
               color="red"
               section="community"
-              sentence="In the dance of agency and fate, love is the melody that guides our steps."
+              sentence="Unlock the fifth chakra of WiFi connection. The universe awaits through a 5G portal."
               character="neet"
             />
           )}
