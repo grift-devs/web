@@ -51,8 +51,8 @@ body {
     rgb(var(--background-start-rgb)); */
   /* background: radial-gradient(circle at 50% 300px, #0c2656, #000d25 100%),
     #0c2656; */
-  background: radial-gradient(circle at 50% 300px, #26fafe, #c40ce9 100%),
-    #ef99fa;
+  background: radial-gradient(circle at 50% 300px, #b30303, #2b0e01 100%),
+    #3e1e01;
   /* background: radial-gradient(circle at 50% 300px, #032f30, #450352 100%),
     #4d3051; */
 }
@@ -62,8 +62,8 @@ a {
 }
 
 .glowy {
-  box-shadow: 80px 40px 75px rgba(255, 255, 255, 0.9),
-    /* Top-right */ -80px 40px 75px rgba(255, 255, 255, 0.9),
-    /* Top-left 80px -40px 75px rgba(255, 255, 255, 0.8), */ /* Bottom-right */ -80px -40px
-      75px rgba(255, 255, 255, 0.9); /* Bottom-left */
+  box-shadow: 80px 40px 75px rgba(20, 20, 20, 0.9),
+    /* Top-right */ -80px 40px 75px rgba(20, 20, 20, 0.9),
+    /* Top-left 80px -40px 75px rgba(20, 20, 20, 0.8), */ /* Bottom-right */ -80px -40px
+      75px rgba(20, 20, 20, 0.9); /* Bottom-left */
 }

@@ -63,9 +63,9 @@ class SnowMaker {
   constructor(canvas: HTMLCanvasElement, numOfFlakes = randomInt(50, 100)) {
     this.canvas = canvas;
     this.ctx = this.canvas.getContext("2d")!;
-    this.cloudImage.src = "/cloud.png";
-    this.unicornImage.src = "/unicorn.png";
-    this.heartImage.src = "/whiteheart.png";
+    this.cloudImage.src = "/sprites/ak47.png";
+    this.unicornImage.src = "/sprites/beer.png";
+    this.heartImage.src = "/sprites/flame.png";
     this.initCanvas();
     this.generateFlakes(numOfFlakes);
     this.attachEvents();

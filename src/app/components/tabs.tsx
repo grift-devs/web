@@ -15,7 +15,7 @@ function Tabs() {
           aria-selected={activeTab === "Dragon"}
           onClick={() => setActiveTab("Dragon")}>
           <a href="#tabs">
-            <p className="font-sys text-4xl text-blue-500">Dragon</p>
+            <p className="font-sys text-4xl text-red-500">Dragon</p>
           </a>
         </li>
         <li
@@ -24,7 +24,7 @@ function Tabs() {
           aria-selected={activeTab === "Angel"}
           onClick={() => setActiveTab("Angel")}>
           <a href="#tabs">
-            <p className="font-sys text-4xl text-blue-500">Angel</p>
+            <p className="font-sys text-4xl text-red-500">Angel</p>
           </a>
         </li>
         <li
@@ -33,7 +33,7 @@ function Tabs() {
           aria-selected={activeTab === "Princess"}
           onClick={() => setActiveTab("Princess")}>
           <a href="#tabs">
-            <p className="font-sys text-4xl text-blue-500">Princess</p>
+            <p className="font-sys text-4xl text-red-500">Princess</p>
           </a>
         </li>
       </menu>
@@ -45,7 +45,7 @@ function Tabs() {
               image="/drawings/2.png"
               text="Seeking purpose?"
               reverse={false}
-              color="green"
+              color="black"
               section="about"
               sentence="Challenge the dominant discourse on technology control."
               character="dragon"
@@ -57,7 +57,7 @@ function Tabs() {
               image="/drawings/1.png"
               text="Seeking comfort?"
               reverse={false}
-              color="fuchsia"
+              color="orange"
               section="tokenomics"
               sentence="Every challenge we face only adds to the tapestry of our story."
               character="angel"
@@ -69,7 +69,7 @@ function Tabs() {
               image="/drawings/3.png"
               text="Seeking love?"
               reverse={false}
-              color="blue"
+              color="red"
               section="community"
               sentence="In the dance of agency and fate, love is the melody that guides our steps."
               character="princess"

@@ -19,13 +19,13 @@ export default function Home() {
       <div className="flex flex-col gap-46 z-10">
         <div>
           <div className="glowy bg-gray-100/70">
-            <TitleBar title={"𝒈𝒓𝒆𝒆𝒕𝒊𝒏𝒈𝒔, 𝒇𝒆𝒍𝒍𝒐𝒘 𝒊𝒏𝒕𝒆𝒓𝒏𝒆𝒕 𝒆𝒙𝒑𝒍𝒐𝒓𝒆𝒓!"} />
+            <TitleBar title={"welcome to the jungle"} />
             <Navbar />
 
             <div className="relative flex-col max-w-5xl">
               <Image
                 className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
-                src="/bpd_logo.png"
+                src="/grift.png"
                 alt="main"
                 width={1000}
                 height={300}
@@ -61,38 +61,38 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="text-rose-500 text-fuchsia-500 text-blue-500 text-teal-500 text-indigo-500 text-yellow-500 text-green-500"></div>
+      <div className="text-red-500 text-orange-500 text-blue-500 text-teal-500 text-indigo-500 text-yellow-500 text-green-500"></div>
     </main>
   );
 }
 
-const ImageRotator = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+// const ImageRotator = () => {
+//   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const images = [
-    "/drawings/moon.png",
-    "/drawings/sun.png",
-    "/drawings/stars.png",
-    "/drawings/wind.png",
-  ];
+//   const images = [
+//     "/drawings/moon.png",
+//     "/drawings/sun.png",
+//     "/drawings/stars.png",
+//     "/drawings/wind.png",
+//   ];
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 200);
+//   useEffect(() => {
+//     const timer = setInterval(() => {
+//       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+//     }, 200);
 
-    // Cleanup: clear the interval when the component is unmounted
-    return () => clearInterval(timer);
-  }, []);
+//     // Cleanup: clear the interval when the component is unmounted
+//     return () => clearInterval(timer);
+//   }, []);
 
-  return (
-    <div>
-      <Image
-        width={500}
-        height={500}
-        src={images[currentImageIndex]}
-        alt="Rotating Content"
-      />
-    </div>
-  );
-};
+//   return (
+//     <div>
+//       <Image
+//         width={500}
+//         height={500}
+//         src={images[currentImageIndex]}
+//         alt="Rotating Content"
+//       />
+//     </div>
+//   );
+// };

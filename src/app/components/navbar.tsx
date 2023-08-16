@@ -7,26 +7,24 @@ const Navbar = () => (
         0xC81b0d02393a956234E24564805a896f14ad1250
       </button>
       <button className="title-bar-text font-mono font-bold text-rose-500">
-        <a
-          href="https://www.dextools.io/app/en/pairs"
-          className="text-blue-500">
+        <a href="https://www.dextools.io/app/en/pairs" className="text-red-500">
           dextools
         </a>
       </button>
       <button className="title-bar-text font-mono font-bold text-rose-500">
         <a
           href="https://etherscan.io/address/0xC81b0d02393a956234E24564805a896f14ad1250"
-          className="text-blue-500">
+          className="text-red-500">
           etherscan
         </a>
       </button>
       <button className="title-bar-text font-mono font-bold text-rose-500">
-        <a href="https://twitter.com/bpd_clearpill" className="text-blue-500">
+        <a href="https://twitter.com/bpd_clearpill" className="text-red-500">
           twitter
         </a>
       </button>
       <button className="title-bar-text font-mono font-bold text-rose-500">
-        <a href="https://t.me/bpd_portal" className="text-blue-500">
+        <a href="https://t.me/bpd_portal" className="text-red-500">
           telegram
         </a>
       </button>
@@ -38,7 +36,7 @@ const Navbar = () => (
         target="_blank"
         rel="noopener noreferrer">
         <Image
-          src="/2.jpeg"
+          src="/flag.jpg"
           alt="logo"
           className="z-12"
           width={100}
