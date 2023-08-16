@@ -22,10 +22,10 @@ export default function Home() {
             <TitleBar title={"welcome to the jungle"} />
             <Navbar />
 
-            <div className="relative flex-col max-w-5xl">
+            <div className="relative flex-col max-w-5xl flex items-center pb-12">
               <Image
                 className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
-                src="/grift.png"
+                src="/logo.png"
                 alt="main"
                 width={1000}
                 height={300}
@@ -36,7 +36,7 @@ export default function Home() {
           </div>
         </div>
         <div className="glowy max-w-5xl mt-44 bg-gray-100/70" id={"about"}>
-          <TitleBar title="BPD Knowledge" />
+          <TitleBar title="GRIFT Knowledge" />
           <Tabs />
         </div>
 

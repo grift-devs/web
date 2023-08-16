@@ -12,7 +12,7 @@ const TokenTable = () => (
       <tbody>
         <tr>
           {/* <td>0x000000000000000000000000000000000000dead</td> */}
-          <td>5.55 Billion $BPD</td>
+          <td>2.22 Billion $GRIFT</td>
           <td>0</td>
           <td>1%</td>
         </tr>

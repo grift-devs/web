@@ -23,7 +23,7 @@ const Menu = () => (
     <button className="border flex w-full border-transparent bg-gray-200 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/90">
       <a
         href={
-          "https://app.uniswap.org/#/swap?outputCurrency=0xC81b0d02393a956234E24564805a896f14ad1250"
+          "https://app.uniswap.org/#/swap?outputCurrency=0x965ad0fc70afc3debb2d63d6f6b9ea3855794a98"
         }
         className={`text-red-500 group rounded-lg flex flex-col w-full h-full items-center justify-center rounded-lg`}
         target={"_blank"}

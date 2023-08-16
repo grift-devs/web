@@ -7,13 +7,15 @@ const Navbar = () => (
         0xC81b0d02393a956234E24564805a896f14ad1250
       </button>
       <button className="title-bar-text font-mono font-bold text-rose-500">
-        <a href="https://www.dextools.io/app/en/pairs" className="text-red-500">
+        <a
+          href="https://www.dextools.io/app/en/ether/pair-explorer/0x59b7afe007fded03b6b706804ea680bd722e8e36"
+          className="text-red-500">
           dextools
         </a>
       </button>
       <button className="title-bar-text font-mono font-bold text-rose-500">
         <a
-          href="https://etherscan.io/address/0xC81b0d02393a956234E24564805a896f14ad1250"
+          href="https://etherscan.io/address/0x965ad0fc70afc3debb2d63d6f6b9ea3855794a98"
           className="text-red-500">
           etherscan
         </a>

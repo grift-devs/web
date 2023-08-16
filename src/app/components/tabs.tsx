@@ -54,8 +54,8 @@ function Tabs() {
           {activeTab === "Player" && (
             <TeamPfps
               title="The Money"
-              image="/drawings/1.png"
-              text="Seeking comfort?"
+              image="/pfps/player.png"
+              text="Seeking Love?"
               reverse={false}
               color="orange"
               section="tokenomics"
@@ -66,8 +66,8 @@ function Tabs() {
           {activeTab === "NEET" && (
             <TeamPfps
               title="The Art"
-              image="/drawings/3.png"
-              text="Seeking love?"
+              image="/pfps/neet.png"
+              text="Seeking comfort?"
               reverse={false}
               color="red"
               section="community"
