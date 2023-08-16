@@ -102,7 +102,7 @@ const TeamPfps = ({
       <div className="flex flex-col gap-20 m-4 w-full">
         <div className="flex lg:flex-row gap-20 flex-col">
           <Image
-            className="glowy dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-full h-full shadow-outset inset-0 border-t-4 border-transparent"
+            className="glowy dark:drop-shadow-[0_0_0.3rem_#ffffff70] w-full h-full shadow-outset inset-0 border-t-0 border-transparent"
             src={image}
             alt="main"
             width={500}

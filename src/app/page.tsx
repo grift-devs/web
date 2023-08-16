@@ -14,8 +14,8 @@ import ParticleComponent from "./background";
 export default function Home() {
   return (
     <main className="flex min-h-screen w-screen flex-col items-center justify-between p-24 ">
-      <ParticleComponent />
-      {/* <SnowCanvas /> */}
+      {/* <ParticleComponent /> */}
+      <SnowCanvas />
       <Popup />
       <div className="flex flex-col gap-46 z-10">
         <div>

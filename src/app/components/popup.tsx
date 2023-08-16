@@ -19,7 +19,7 @@ function Popup() {
       <div className="window p-6 rounded-lg z-10">
         <div className="title-bar">
           <div className="title-bar-text flex flex-col lg:flex-row lg:gap-8 sm:gap-1 items-center justify-center">
-            ❤HELLO BPD GANG!❤
+            Yo
           </div>
           <div className="title-bar-controls">
             <button aria-label="Minimize"></button>
@@ -29,14 +29,14 @@ function Popup() {
         </div>
         <div className="flex space-x-4 justify-center m-5">
           <button
-            className="px-4 py-2 bg-teal-500 text-white rounded hover:bg-teal-400"
+            className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-400"
             onClick={playAudio}>
-            YES
+            Yo
           </button>
           <button
-            className="px-4 py-2 bg-rose-500 text-white rounded hover:bg-rose-400"
+            className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-400"
             onClick={playAudio}>
-            YES
+            Yo
           </button>
         </div>
       </div>
