@@ -104,13 +104,13 @@ export default function Directives({ sentence, character }) {
   const intervalId = useRef(null);
   let directives;
   switch (character) {
-    case "dragon":
+    case "psycho":
       directives = commands;
       break;
-    case "angel":
+    case "player":
       directives = comforts;
       break;
-    case "princess":
+    case "neet":
       directives = love;
       break;
     default:

@@ -51,7 +51,7 @@ body {
     rgb(var(--background-start-rgb)); */
   /* background: radial-gradient(circle at 50% 300px, #0c2656, #000d25 100%),
     #0c2656; */
-  background: radial-gradient(circle at 50% 300px, #b30303, #2b0e01 100%),
+  background: radial-gradient(circle at 50% 300px, #2b0e01, #2b0e01 100%),
     #3e1e01;
   /* background: radial-gradient(circle at 50% 300px, #032f30, #450352 100%),
     #4d3051; */

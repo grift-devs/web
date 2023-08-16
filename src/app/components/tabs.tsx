@@ -4,7 +4,7 @@ import Image from "next/image";
 import Directives from "../directives";
 
 function Tabs() {
-  const [activeTab, setActiveTab] = useState("Dragon");
+  const [activeTab, setActiveTab] = useState("Psycho");
 
   return (
     <div>
@@ -12,46 +12,46 @@ function Tabs() {
         <li
           className="flex-1"
           role="tab"
-          aria-selected={activeTab === "Dragon"}
-          onClick={() => setActiveTab("Dragon")}>
+          aria-selected={activeTab === "Psycho"}
+          onClick={() => setActiveTab("Psycho")}>
           <a href="#tabs">
-            <p className="font-sys text-4xl text-red-500">Dragon</p>
+            <p className="font-sys text-4xl text-red-500">Psycho</p>
           </a>
         </li>
         <li
           className="flex-1"
           role="tab"
-          aria-selected={activeTab === "Angel"}
-          onClick={() => setActiveTab("Angel")}>
+          aria-selected={activeTab === "Player"}
+          onClick={() => setActiveTab("Player")}>
           <a href="#tabs">
-            <p className="font-sys text-4xl text-red-500">Angel</p>
+            <p className="font-sys text-4xl text-red-500">Player</p>
           </a>
         </li>
         <li
           className="flex-1"
           role="tab"
-          aria-selected={activeTab === "Princess"}
-          onClick={() => setActiveTab("Princess")}>
+          aria-selected={activeTab === "NEET"}
+          onClick={() => setActiveTab("NEET")}>
           <a href="#tabs">
-            <p className="font-sys text-4xl text-red-500">Princess</p>
+            <p className="font-sys text-4xl text-red-500">NEET</p>
           </a>
         </li>
       </menu>
       <div className="window" role="tabpanel">
         <div className="window-body">
-          {activeTab === "Dragon" && (
+          {activeTab === "Psycho" && (
             <TeamPfps
               title="The Leader"
-              image="/drawings/2.png"
+              image="/pfps/psycho_.png"
               text="Seeking purpose?"
               reverse={false}
               color="black"
               section="about"
               sentence="Challenge the dominant discourse on technology control."
-              character="dragon"
+              character="psycho"
             />
           )}
-          {activeTab === "Angel" && (
+          {activeTab === "Player" && (
             <TeamPfps
               title="The Money"
               image="/drawings/1.png"
@@ -60,10 +60,10 @@ function Tabs() {
               color="orange"
               section="tokenomics"
               sentence="Every challenge we face only adds to the tapestry of our story."
-              character="angel"
+              character="player"
             />
           )}
-          {activeTab === "Princess" && (
+          {activeTab === "NEET" && (
             <TeamPfps
               title="The Art"
               image="/drawings/3.png"
@@ -72,7 +72,7 @@ function Tabs() {
               color="red"
               section="community"
               sentence="In the dance of agency and fate, love is the melody that guides our steps."
-              character="princess"
+              character="NEET"
             />
           )}
         </div>
