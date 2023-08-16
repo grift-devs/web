@@ -72,7 +72,7 @@ function Tabs() {
               color="red"
               section="community"
               sentence="In the dance of agency and fate, love is the melody that guides our steps."
-              character="NEET"
+              character="neet"
             />
           )}
         </div>
